@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.BackToMainForm = new System.Windows.Forms.Button();
-            this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.Bb35 = new System.Windows.Forms.TextBox();
             this.Bb34 = new System.Windows.Forms.TextBox();
             this.Bb33 = new System.Windows.Forms.TextBox();
@@ -157,14 +156,6 @@
             this.BackToMainForm.Text = "Назад";
             this.BackToMainForm.UseVisualStyleBackColor = true;
             this.BackToMainForm.Click += new System.EventHandler(this.BackToMainForm_Click);
-            // 
-            // backgroundWorker
-            // 
-            this.backgroundWorker.WorkerReportsProgress = true;
-            this.backgroundWorker.WorkerSupportsCancellation = true;
-            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
-            this.backgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker_ProgressChanged);
-            this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
             // 
             // Bb35
             // 
@@ -1163,7 +1154,6 @@
         #endregion
 
         private System.Windows.Forms.Button BackToMainForm;
-        private System.ComponentModel.BackgroundWorker backgroundWorker;
         private System.Windows.Forms.TextBox Bb35;
         private System.Windows.Forms.TextBox Bb34;
         private System.Windows.Forms.TextBox Bb33;

@@ -120,7 +120,15 @@ namespace Attempt3
                     sboShee.Items.Add(dt.TableName);
                 reader.Close();
             }
-            else { MessageBox.Show("Нет открытого файла", "Ошибка!"); }
+            else
+            {
+                dataGridView.DataSource = null;
+                MessageBox.Show("Нет открытого файла", "Ошибка!");
+            }
+            if (values.ThePathToTheFolder == null)
+            {
+                sboShee.Items.Clear();
+            }
             //    }
             //}
         }
@@ -129,9 +137,12 @@ namespace Attempt3
 
         private void sboShee_SelectedIndexChanged(object sender, EventArgs e)
         {
-           //Select sheet
+            //Select sheet
+            Values values = new Values();
 
             dataGridView.DataSource = result.Tables[sboShee.SelectedIndex];
+
+        
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -141,8 +152,13 @@ namespace Attempt3
             dataGridView.CurrentCell.RowIndex,
             dataGridView.CurrentCell.ColumnIndex);
             MessageBox.Show(msg, "Current Cell");
-            a = Convert.ToString(dataGridView.Rows[3].Cells[2].Value);
+            a = Convert.ToString(dataGridView.Rows[2].Cells[3].Value);
             MessageBox.Show(a);
+
+        }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

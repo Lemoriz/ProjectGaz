@@ -129,6 +129,10 @@ namespace Attempt3
         private void CloseProjectToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
 
+            //////////////////////////////////////////////////////////////////////////////////
+            Values values = new Values();
+            values.ThePathToTheFolder = null;
+            
         }
 
         private void ExitToolStripMenuItem_Click_1(object sender, EventArgs e)

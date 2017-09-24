@@ -117,9 +117,16 @@ namespace Attempt3
 
         private void Delete_Click(object sender, EventArgs e)
         {
+            int a, j;
             // delete datagridview row selected row
             selectedRow = dataGridView1.CurrentCell.RowIndex;
-            dataGridView1.Rows.RemoveAt(selectedRow);
+            if (selectedRow != dataGridView1.Rows.Count-1)
+            {
+                a = selectedRow;
+                j = dataGridView1.Rows.Count;
+
+                dataGridView1.Rows.RemoveAt(selectedRow);
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -235,6 +242,8 @@ namespace Attempt3
                 ExcelApp.ActiveWorkbook.SaveCopyAs(saveFileDialog1.FileName.ToString());
                 ExcelApp.ActiveWorkbook.Saved = true;
                 ExcelApp.Quit();
+
+                MessageBox.Show(saveFileDialog1.FileName, "Загруска файла успешно выполнена");
             }
         }
 

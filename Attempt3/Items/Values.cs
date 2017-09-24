@@ -17,15 +17,8 @@ namespace Attempt3
 
             set
             {
-                if (value != null)
-                {
-                    thePathToTheFolder = value;
-                }
-                else
-                {
-                    Console.WriteLine("Error! File is empty");
-                }
-            }
+                thePathToTheFolder = value;
+            }           
         }
 
         private static int theFilterIndex;
