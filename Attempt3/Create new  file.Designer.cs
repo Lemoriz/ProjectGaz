@@ -143,6 +143,8 @@
             this.Update = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.Clean = new System.Windows.Forms.Button();
+            this.Save = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1052,11 +1054,23 @@
             this.Clean.UseVisualStyleBackColor = true;
             this.Clean.Click += new System.EventHandler(this.Clean_Click);
             // 
+            // Save
+            // 
+            this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Save.Location = new System.Drawing.Point(802, 385);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(75, 23);
+            this.Save.TabIndex = 167;
+            this.Save.Text = "Сохранить";
+            this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
             // Create_new__file
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 419);
+            this.Controls.Add(this.Save);
             this.Controls.Add(this.Clean);
             this.Controls.Add(this.Bb35);
             this.Controls.Add(this.Bb34);
@@ -1263,5 +1277,7 @@
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Clean;
+        private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

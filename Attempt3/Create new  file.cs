@@ -205,5 +205,38 @@ namespace Attempt3
             Bb64.Text = null;
             Bb65.Text = null;
         }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.InitialDirectory = "C:";
+            saveFileDialog1.Title = "Cохранить в Excel файл";
+            saveFileDialog1.FileName = "";
+            saveFileDialog1.Filter = "Excel Workbook 97-2003|*.xls|Excel Workbook|*.xlsx";
+
+            if (saveFileDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+                ExcelApp.Application.Workbooks.Add(Type.Missing);
+
+                ExcelApp.Columns.ColumnWidth = 10;
+
+                for (int i = 1; i < dataGridView1.Columns.Count +1; i++)
+                {
+                    ExcelApp.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
+                {
+                    for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                    {
+                        ExcelApp.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+                ExcelApp.ActiveWorkbook.SaveCopyAs(saveFileDialog1.FileName.ToString());
+                ExcelApp.ActiveWorkbook.Saved = true;
+                ExcelApp.Quit();
+            }
+        }
+
     }
 }
