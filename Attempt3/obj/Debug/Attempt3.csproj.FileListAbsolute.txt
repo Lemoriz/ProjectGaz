@@ -1,0 +1,44 @@
+C:\Users\Ramil\Desktop\Программа Газ\Attempt3\Attempt3\bin\Debug\Attempt3.exe.config
+C:\Users\Ramil\Desktop\Программа Газ\Attempt3\Attempt3\bin\Debug\Attempt3.exe
+C:\Users\Ramil\Desktop\Программа Газ\Attempt3\Attempt3\bin\Debug\Attempt3.pdb
+C:\Users\Ramil\Desktop\Программа Газ\Attempt3\Attempt3\obj\Debug\Attempt3.csprojResolveAssemblyReference.cache
+C:\Users\Ramil\Desktop\Программа Газ\Attempt3\Attempt3\obj\Debug\Attempt3.csproj.ResolveComReference.cache
+C:\Users\Ramil\Desktop\Программа Газ\Attempt3\Attempt3\obj\Debug\Attempt3.MainScreen.resources
+C:\Users\Ramil\Desktop\Программа Газ\Attempt3\Attempt3\obj\Debug\Attempt3.Properties.Resources.resources
+C:\Users\Ramil\Desktop\Программа Газ\Attempt3\Attempt3\obj\Debug\Attempt3.csproj.GenerateResource.Cache
+C:\Users\Ramil\Desktop\Программа Газ\Attempt3\Attempt3\obj\Debug\Attempt3.csproj.CoreCompileInputs.cache
+C:\Users\Ramil\Desktop\Программа Газ\Attempt3\Attempt3\obj\Debug\Attempt3.exe
+C:\Users\Ramil\Desktop\Программа Газ\Attempt3\Attempt3\obj\Debug\Attempt3.pdb
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\bin\Debug\Attempt3.exe.config
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\bin\Debug\Attempt3.exe
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\bin\Debug\Attempt3.pdb
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\obj\Debug\Attempt3.csproj.ResolveComReference.cache
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\obj\Debug\Attempt3.MainScreen.resources
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\obj\Debug\Attempt3.Properties.Resources.resources
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\obj\Debug\Attempt3.csproj.GenerateResource.Cache
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\obj\Debug\Attempt3.csproj.CoreCompileInputs.cache
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\obj\Debug\Attempt3.exe
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\obj\Debug\Attempt3.pdb
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\obj\Debug\Attempt3.ViewDataBase.resources
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\bin\Debug\ExcelDataReader.dll
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\bin\Debug\ExcelDataReader.xml
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\Ramil\Desktop\ProgrammaGaz\Attempt3\Attempt3\obj\Debug\Attempt3.Create_new__file.resources
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\obj\Debug\Attempt3.csprojResolveAssemblyReference.cache
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\obj\Debug\Attempt3.csproj.ResolveComReference.cache
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\obj\Debug\Attempt3.Create_new__file.resources
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\obj\Debug\Attempt3.MainScreen.resources
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\obj\Debug\Attempt3.Properties.Resources.resources
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\obj\Debug\Attempt3.ViewDataBase.resources
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\obj\Debug\Attempt3.csproj.GenerateResource.Cache
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\obj\Debug\Attempt3.csproj.CoreCompileInputs.cache
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\obj\Debug\Attempt3.exe
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\obj\Debug\Attempt3.pdb
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\bin\Debug\Attempt3.exe.config
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\bin\Debug\Attempt3.exe
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\bin\Debug\Attempt3.pdb
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\bin\Debug\ExcelDataReader.dll
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\bin\Debug\ExcelDataReader.xml
+C:\Users\Ramil\Desktop\Gaz-master\Attempt3\bin\Debug\ExcelDataReader.DataSet.xml
