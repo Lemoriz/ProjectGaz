@@ -129,11 +129,7 @@ namespace Attempt3
             {
                 sboShee.Items.Clear();
             }
-            //    }
-            //}
         }
-        
-    
 
         private void sboShee_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -141,8 +137,6 @@ namespace Attempt3
             Values values = new Values();
 
             dataGridView.DataSource = result.Tables[sboShee.SelectedIndex];
-
-        
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -154,7 +148,6 @@ namespace Attempt3
             MessageBox.Show(msg, "Current Cell");
             a = Convert.ToString(dataGridView.Rows[2].Cells[3].Value);
             MessageBox.Show(a);
-
         }
 
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

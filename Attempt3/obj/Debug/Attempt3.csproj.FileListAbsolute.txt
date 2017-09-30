@@ -59,3 +59,6 @@ C:\Users\Ramil\Desktop\ProjectGaz\Attempt3\obj\Debug\Attempt3.csproj.GenerateRes
 C:\Users\Ramil\Desktop\ProjectGaz\Attempt3\obj\Debug\Attempt3.csproj.CoreCompileInputs.cache
 C:\Users\Ramil\Desktop\ProjectGaz\Attempt3\obj\Debug\Attempt3.exe
 C:\Users\Ramil\Desktop\ProjectGaz\Attempt3\obj\Debug\Attempt3.pdb
+C:\Users\Ramil\Desktop\ProjectGaz\Attempt3\obj\Debug\Attempt3.Perform.resources
+C:\Users\Ramil\Desktop\ProjectGaz\Attempt3\obj\Debug\Interop.InteropExtensionLib.dll
+C:\Users\Ramil\Desktop\ProjectGaz\Attempt3\obj\Debug\Interop.VSTOEE100.dll

@@ -18,12 +18,14 @@ namespace Attempt3
     {
         private ViewDataBase viewDataBase;
         private Create_new__file createFile;
+        private Perform perform;
 
         public MainScreen()
         {
             InitializeComponent();
             viewDataBase = new ViewDataBase(this) { Visible = false };
             createFile = new Create_new__file(this) { Visible = false };
+            perform = new Perform(this) { Visible = false };
         }
 
         private void MainScreen_Load(object sender, EventArgs e)
@@ -119,6 +121,8 @@ namespace Attempt3
                 MessageBox.Show(openFile.FileName, "Загружен файл из папки");
             }
 
+            
+
         }
 
         private void SaveProjectToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -152,7 +156,8 @@ namespace Attempt3
 
         private void PerformToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            perform.Visible = true;
         }
 
         private void ConstructAGraphToolStripMenuItem_Click(object sender, EventArgs e)

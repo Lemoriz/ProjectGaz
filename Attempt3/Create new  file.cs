@@ -33,8 +33,7 @@ namespace Attempt3
 
         private void BackToMainForm_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            mainScreen.Visible = true;
+
         }
 
         private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -64,7 +63,7 @@ namespace Attempt3
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void Add_Click(object sender, EventArgs e)
@@ -236,7 +235,7 @@ namespace Attempt3
                 {
                     for (int j = 0; j < dataGridView1.Columns.Count; j++)
                     {
-                        ExcelApp.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                        ExcelApp.Cells[i + 3, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
                     }
                 }
                 ExcelApp.ActiveWorkbook.SaveCopyAs(saveFileDialog1.FileName.ToString());
@@ -247,5 +246,14 @@ namespace Attempt3
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void BackToMainFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            mainScreen.Visible = true;
+        }
     }
 }

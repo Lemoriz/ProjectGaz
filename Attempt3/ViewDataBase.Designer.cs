@@ -57,14 +57,14 @@
             // BackToMainFormToolStripMenuItem
             // 
             this.BackToMainFormToolStripMenuItem.Name = "BackToMainFormToolStripMenuItem";
-            this.BackToMainFormToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.BackToMainFormToolStripMenuItem.Text = "Back";
+            this.BackToMainFormToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.BackToMainFormToolStripMenuItem.Text = "Назад";
             this.BackToMainFormToolStripMenuItem.Click += new System.EventHandler(this.BackToMainFormToolStripMenuItem_Click);
             // 
             // btnOpen
             // 
             this.btnOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOpen.Location = new System.Drawing.Point(665, 381);
+            this.btnOpen.Location = new System.Drawing.Point(660, 381);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 23);
             this.btnOpen.TabIndex = 11;
@@ -83,13 +83,15 @@
             // 
             // dataGridView
             // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(12, 36);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(728, 339);
+            this.dataGridView.Size = new System.Drawing.Size(723, 339);
             this.dataGridView.TabIndex = 9;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
@@ -127,7 +129,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ViewDataBase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ViewDataBase";
+            this.Text = "Просмотр базы";
             this.Load += new System.EventHandler(this.ViewDataBase_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

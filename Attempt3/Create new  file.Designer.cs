@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BackToMainForm = new System.Windows.Forms.Button();
             this.Bb35 = new System.Windows.Forms.TextBox();
             this.Bb34 = new System.Windows.Forms.TextBox();
             this.Bb33 = new System.Windows.Forms.TextBox();
@@ -104,6 +103,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.PP = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Update = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
+            this.Clean = new System.Windows.Forms.Button();
+            this.Save = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamePlase = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OutsideAntrop = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -138,24 +143,11 @@
             this.B63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.B64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.B65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.Button();
-            this.Update = new System.Windows.Forms.Button();
-            this.Add = new System.Windows.Forms.Button();
-            this.Clean = new System.Windows.Forms.Button();
-            this.Save = new System.Windows.Forms.Button();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.BackToMainFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // BackToMainForm
-            // 
-            this.BackToMainForm.Location = new System.Drawing.Point(12, 12);
-            this.BackToMainForm.Name = "BackToMainForm";
-            this.BackToMainForm.Size = new System.Drawing.Size(75, 23);
-            this.BackToMainForm.TabIndex = 0;
-            this.BackToMainForm.Text = "Назад";
-            this.BackToMainForm.UseVisualStyleBackColor = true;
-            this.BackToMainForm.Click += new System.EventHandler(this.BackToMainForm_Click);
             // 
             // Bb35
             // 
@@ -804,6 +796,59 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // Delete
+            // 
+            this.Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Delete.Location = new System.Drawing.Point(973, 385);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.TabIndex = 90;
+            this.Delete.Text = "Удалить";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // Update
+            // 
+            this.Update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Update.Location = new System.Drawing.Point(883, 385);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(75, 23);
+            this.Update.TabIndex = 89;
+            this.Update.Text = "Обновить";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
+            // 
+            // Add
+            // 
+            this.Add.Location = new System.Drawing.Point(461, 121);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(174, 25);
+            this.Add.TabIndex = 88;
+            this.Add.Text = "Добавить";
+            this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // Clean
+            // 
+            this.Clean.Location = new System.Drawing.Point(984, 121);
+            this.Clean.Name = "Clean";
+            this.Clean.Size = new System.Drawing.Size(75, 25);
+            this.Clean.TabIndex = 166;
+            this.Clean.Text = "Очистить";
+            this.Clean.UseVisualStyleBackColor = true;
+            this.Clean.Click += new System.EventHandler(this.Clean_Click);
+            // 
+            // Save
+            // 
+            this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Save.Location = new System.Drawing.Point(802, 385);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(75, 23);
+            this.Save.TabIndex = 167;
+            this.Save.Text = "Сохранить";
+            this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
             // Number
             // 
             this.Number.HeaderText = "№ПП";
@@ -819,7 +864,7 @@
             // 
             // OutsideAntrop
             // 
-            this.OutsideAntrop.HeaderText = "Внешние антропогенные воздействия                 B11 ";
+            this.OutsideAntrop.HeaderText = "Внешние антропогенные воздействия             B11 ";
             this.OutsideAntrop.Name = "OutsideAntrop";
             // 
             // B12
@@ -1003,64 +1048,29 @@
             this.B65.Name = "B65";
             this.B65.Width = 28;
             // 
-            // Delete
+            // menuStrip1
             // 
-            this.Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Delete.Location = new System.Drawing.Point(973, 385);
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(75, 23);
-            this.Delete.TabIndex = 90;
-            this.Delete.Text = "Удалить";
-            this.Delete.UseVisualStyleBackColor = true;
-            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BackToMainFormToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1072, 24);
+            this.menuStrip1.TabIndex = 168;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // Update
+            // BackToMainFormToolStripMenuItem
             // 
-            this.Update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Update.Location = new System.Drawing.Point(883, 385);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 89;
-            this.Update.Text = "Обновить";
-            this.Update.UseVisualStyleBackColor = true;
-            this.Update.Click += new System.EventHandler(this.Update_Click);
-            // 
-            // Add
-            // 
-            this.Add.Location = new System.Drawing.Point(461, 121);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(174, 25);
-            this.Add.TabIndex = 88;
-            this.Add.Text = "Добавить";
-            this.Add.UseVisualStyleBackColor = true;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
-            // 
-            // Clean
-            // 
-            this.Clean.Location = new System.Drawing.Point(984, 121);
-            this.Clean.Name = "Clean";
-            this.Clean.Size = new System.Drawing.Size(75, 25);
-            this.Clean.TabIndex = 166;
-            this.Clean.Text = "Очистить";
-            this.Clean.UseVisualStyleBackColor = true;
-            this.Clean.Click += new System.EventHandler(this.Clean_Click);
-            // 
-            // Save
-            // 
-            this.Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Save.Location = new System.Drawing.Point(802, 385);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(75, 23);
-            this.Save.TabIndex = 167;
-            this.Save.Text = "Сохранить";
-            this.Save.UseVisualStyleBackColor = true;
-            this.Save.Click += new System.EventHandler(this.Save_Click);
+            this.BackToMainFormToolStripMenuItem.Name = "BackToMainFormToolStripMenuItem";
+            this.BackToMainFormToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.BackToMainFormToolStripMenuItem.Text = "Назад";
+            this.BackToMainFormToolStripMenuItem.Click += new System.EventHandler(this.BackToMainFormToolStripMenuItem_Click);
             // 
             // Create_new__file
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 419);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.Clean);
             this.Controls.Add(this.Bb35);
@@ -1141,19 +1151,18 @@
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.Add);
-            this.Controls.Add(this.BackToMainForm);
             this.Name = "Create_new__file";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Создать новый файл";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BackToMainForm;
         private System.Windows.Forms.TextBox Bb35;
         private System.Windows.Forms.TextBox Bb34;
         private System.Windows.Forms.TextBox Bb33;
@@ -1229,6 +1238,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label PP;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button Clean;
+        private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamePlase;
         private System.Windows.Forms.DataGridViewTextBoxColumn OutsideAntrop;
@@ -1263,11 +1278,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn B63;
         private System.Windows.Forms.DataGridViewTextBoxColumn B64;
         private System.Windows.Forms.DataGridViewTextBoxColumn B65;
-        private System.Windows.Forms.Button Delete;
-        private System.Windows.Forms.Button Update;
-        private System.Windows.Forms.Button Add;
-        private System.Windows.Forms.Button Clean;
-        private System.Windows.Forms.Button Save;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem BackToMainFormToolStripMenuItem;
     }
 }
