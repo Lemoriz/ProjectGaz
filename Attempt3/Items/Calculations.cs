@@ -72,6 +72,29 @@ namespace Attempt3
             return Math.Pow((a * (value1 / 10)), pow1) * Math.Pow((a * (value2 / 10)), pow2) * Math.Pow((a * (value3 / 10)), pow3) * Math.Pow((a * (value4 / 10)), pow4) * Math.Pow((a * (value5 / 10)), pow5) * Math.Pow((a * (value6 / 10)), pow6) * Math.Pow((a * (value7 / 10)), pow7);
         }
 
+
+        //AverageValue
+        public double AverageValue(double value1, double value2, double value3, double value4)
+        {
+            return (value1 + value2 + value3 + value4) / 4;
+        }
+
+        public double AverageValue(double value1, double value2, double value3, double value4, double value5)
+        {
+            return (value1 + value2 + value3 + value4 + value5) / 5;
+        }
+
+        public double AverageValue(double value1, double value2, double value3, double value4, double value5, double value6, double value7)
+        {
+            return (value1 + value2 + value3 + value4 + value5 + value6 + value7) / 7;
+        }
+
+        //AverageValueAll
+        public double AllAverageValue(double value1, double value2, double value3, double value4, double value5, double value6)
+        {
+            return (value1 + value2 + value3 + value4 + value5 + value6) / 6;
+        }
+
         //Format
         public string FormatForMult(double value)
         {
@@ -86,6 +109,11 @@ namespace Attempt3
         public string FormatForComb1(double value)
         {
             return String.Format("{0:0.000000000}", value);
+        }
+
+        public string FormatForAverageValue(double value)
+        {
+            return String.Format("{0:0.00}", value);
         }
     }
 }
