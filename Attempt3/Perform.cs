@@ -10,9 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using ExcelDataReader;
-
-
-
+using System.ComponentModel;
+using System.Data;
 
 namespace Attempt3
 {
@@ -228,7 +227,6 @@ namespace Attempt3
             allAverageValue[2, 2]= Math.Abs(allAverageValue[0, 2] - allAverageValue[1, 0]);
             allAverageValue[2, 3]= Math.Abs(allAverageValue[0, 3] - allAverageValue[1, 0]);
 
-
             dataGridView.Rows.Add(1);
 
             dataGridView.Rows[MaxRowsInAExcel].Cells[42].Value = "cреднее";
@@ -248,6 +246,11 @@ namespace Attempt3
             dataGridView.Rows[MaxRowsInAExcel + 2].Cells[45].Value = calculations.FormatForAverageValue(allAverageValue[2, 2]);
             dataGridView.Rows[MaxRowsInAExcel + 2].Cells[46].Value = calculations.FormatForAverageValue(allAverageValue[2, 3]);
 
+            Values asd = new Values();
+            asd.DouvleArray(arrayResult);
+            asd.MaxRowInExcel = MaxRowsInAExcel;
+
+            asd.AddString(arrayString);
             ObjExcel.Quit();
         }
 
@@ -258,6 +261,163 @@ namespace Attempt3
         {
             this.Visible = false;
             mainScreen.Visible = true;
+        }
+
+        private void save_Click(object sender, EventArgs e)
+        {
+            Values values = new Values();
+
+            saveFileDialog1.InitialDirectory = "C:";
+            saveFileDialog1.Title = "Cохранить в Excel файл";
+            saveFileDialog1.FileName = "";
+            saveFileDialog1.Filter = "Excel Workbook 97-2003|*.xls|Excel Workbook|*.xlsx";
+
+            if (saveFileDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+                ExcelApp.Application.Workbooks.Add(Type.Missing);
+
+                ExcelApp.Columns.ColumnWidth = 10;
+
+                //for (int i = 1; i < dataGridView.Columns.Count + 1; i++)
+                //{
+                //    ExcelApp.Cells[1, i] = dataGridView.Columns[i - 1].HeaderText;
+                //}
+                //Tabl1
+                ExcelApp.Cells[1, 1] = "№ ПП";
+                ExcelApp.Range[ExcelApp.Cells[1, 1], ExcelApp.Cells[3, 1]].Merge();
+                ExcelApp.Cells[1, 2] = "Наименование участков";
+                ExcelApp.Range[ExcelApp.Cells[1, 2], ExcelApp.Cells[3, 2]].Merge();
+                ExcelApp.Cells[1, 3] = "Внешние антропогенные воздействия";
+                ExcelApp.Range[ExcelApp.Cells[1, 3], ExcelApp.Cells[2, 5]].Merge();
+                ExcelApp.Cells[3, 3] = "адд";
+                ExcelApp.Range["C3"].Font.Bold = true;
+                ExcelApp.Cells[3, 4] = "мулт";
+                ExcelApp.Range["D3"].Font.Bold = true;
+                ExcelApp.Cells[3, 5] = "комб";
+                ExcelApp.Range["E3"].Font.Bold = true;
+                ExcelApp.Cells[3, 6] = "комб1";
+                ExcelApp.Range["F3"].Font.Bold = true;
+                ExcelApp.Cells[1, 6] = "№1";
+                ExcelApp.Cells[1, 7] = "средн. генер.";
+                ExcelApp.Range[ExcelApp.Cells[1, 7], ExcelApp.Cells[3, 7]].Merge();
+
+                for (int i = 0; i < values.MaxRowInExcel; i++)
+                {
+                    for (int j = 0; j < 2; j++)
+                    {
+                        ExcelApp.Cells[i + 4, j + 1] = Values.addString[i, j];
+                    }
+                }
+
+                for (int i = 0; i < values.MaxRowInExcel; i++)
+                {
+                    for (int j = 0; j < 4; j++)
+                    {
+                        ExcelApp.Cells[i + 4, j + 3] = Values.addValue[i, j];
+                    }
+                }
+
+
+                //Tabl2
+                ExcelApp.Cells[1, 9] = "Наименование участков";
+                ExcelApp.Range[ExcelApp.Cells[1, 9], ExcelApp.Cells[3, 9]].Merge();
+                ExcelApp.Cells[1, 10] = "Природные воздействия";
+                ExcelApp.Range[ExcelApp.Cells[1, 10], ExcelApp.Cells[2, 12]].Merge();
+                ExcelApp.Cells[3, 10] = "адд";
+                ExcelApp.Range["J3"].Font.Bold = true;
+                ExcelApp.Cells[3, 11] = "мулт";
+                ExcelApp.Range["K3"].Font.Bold = true;
+                ExcelApp.Cells[3, 12] = "комб";
+                ExcelApp.Range["L3"].Font.Bold = true;
+                ExcelApp.Cells[3, 13] = "комб1";
+                ExcelApp.Range["M3"].Font.Bold = true;
+                ExcelApp.Cells[1, 13] = "№2";
+                ExcelApp.Cells[1, 14] = "средн. генер.";
+                ExcelApp.Range[ExcelApp.Cells[1, 14], ExcelApp.Cells[3, 14]].Merge();
+
+                //Tabl3
+                ExcelApp.Cells[1, 16] = "Наименование участков";
+                ExcelApp.Range[ExcelApp.Cells[1, 16], ExcelApp.Cells[3, 16]].Merge();
+                ExcelApp.Cells[1, 17] = "Качество строительномонтажных работ";
+                ExcelApp.Range[ExcelApp.Cells[1, 17], ExcelApp.Cells[2, 19]].Merge();
+                ExcelApp.Cells[3, 17] = "адд";
+                ExcelApp.Range["Q3"].Font.Bold = true;
+                ExcelApp.Cells[3, 18] = "мулт";
+                ExcelApp.Range["R3"].Font.Bold = true;
+                ExcelApp.Cells[3, 19] = "комб";
+                ExcelApp.Range["S3"].Font.Bold = true;
+                ExcelApp.Cells[3, 20] = "комб1";
+                ExcelApp.Range["T3"].Font.Bold = true;
+                ExcelApp.Cells[1, 20] = "№3";
+                ExcelApp.Cells[1, 21] = "средн. генер.";
+                ExcelApp.Range[ExcelApp.Cells[1, 21], ExcelApp.Cells[3, 21]].Merge();
+
+                //Tabl4
+                ExcelApp.Cells[1, 23] = "Наименование участков";
+                ExcelApp.Range[ExcelApp.Cells[1, 23], ExcelApp.Cells[3, 23]].Merge();
+                ExcelApp.Cells[1, 24] = "Эксплуатационные факторы";
+                ExcelApp.Range[ExcelApp.Cells[1, 24], ExcelApp.Cells[2, 26]].Merge();
+                ExcelApp.Cells[3, 24] = "адд";
+                ExcelApp.Range["X3"].Font.Bold = true;
+                ExcelApp.Cells[3, 25] = "мулт";
+                ExcelApp.Range["Y3"].Font.Bold = true;
+                ExcelApp.Cells[3, 26] = "комб";
+                ExcelApp.Range["Z3"].Font.Bold = true;
+                ExcelApp.Cells[3, 27] = "комб1";
+                ExcelApp.Range["AA3"].Font.Bold = true;
+                ExcelApp.Cells[1, 27] = "№4";
+                ExcelApp.Cells[1, 28] = "средн. генер.";
+                ExcelApp.Range[ExcelApp.Cells[1, 28], ExcelApp.Cells[3, 28]].Merge();
+
+                //Tabl5
+                ExcelApp.Cells[1, 30] = "Наименование участков";
+                ExcelApp.Range[ExcelApp.Cells[1, 30], ExcelApp.Cells[3, 30]].Merge();
+                ExcelApp.Cells[1, 31] = "Качество производства труб и ЗА";
+                ExcelApp.Range[ExcelApp.Cells[1, 31], ExcelApp.Cells[2, 33]].Merge();
+                ExcelApp.Cells[3, 31] = "адд";
+                ExcelApp.Range["AE3"].Font.Bold = true;
+                ExcelApp.Cells[3, 32] = "мулт";
+                ExcelApp.Range["AF3"].Font.Bold = true;
+                ExcelApp.Cells[3, 33] = "комб";
+                ExcelApp.Range["AG3"].Font.Bold = true;
+                ExcelApp.Cells[3, 34] = "комб1";
+                ExcelApp.Range["AH3"].Font.Bold = true;
+                ExcelApp.Cells[1, 34] = "№5";
+                ExcelApp.Cells[1, 35] = "средн. генер.";
+                ExcelApp.Range[ExcelApp.Cells[1, 35], ExcelApp.Cells[3, 35]].Merge();
+
+                //Tabl6
+                ExcelApp.Cells[1, 37] = "Наименование участков";
+                ExcelApp.Range[ExcelApp.Cells[1, 37], ExcelApp.Cells[3, 37]].Merge();
+                ExcelApp.Cells[1, 38] = "Конструктивно-технологические факторы";
+                ExcelApp.Range[ExcelApp.Cells[1, 38], ExcelApp.Cells[2, 40]].Merge();
+                ExcelApp.Cells[3, 38] = "адд";
+                ExcelApp.Range["AL3"].Font.Bold = true;
+                ExcelApp.Cells[3, 39] = "мулт";
+                ExcelApp.Range["AM3"].Font.Bold = true;
+                ExcelApp.Cells[3, 40] = "комб";
+                ExcelApp.Range["AN3"].Font.Bold = true;
+                ExcelApp.Cells[3, 41] = "комб1";
+                ExcelApp.Range["AO3"].Font.Bold = true;
+                ExcelApp.Cells[1, 41] = "№6";
+                ExcelApp.Cells[1, 42] = "средн. генер.";
+                ExcelApp.Range[ExcelApp.Cells[1, 42], ExcelApp.Cells[3, 42]].Merge();
+
+
+                //for (int i = 0; i < dataGridView.Rows.Count -1; i++)
+                //{
+                //    for (int j = 0; j < dataGridView.Columns.Count; j++)
+                //    {
+                //        ExcelApp.Cells[i + 4, j + 1] = 5;
+                //    }
+                //}
+                ExcelApp.ActiveWorkbook.SaveCopyAs(saveFileDialog1.FileName.ToString());
+                ExcelApp.ActiveWorkbook.Saved = true;
+                ExcelApp.Quit();
+
+                MessageBox.Show(saveFileDialog1.FileName, "Загрузка файла успешно выполнена");
+            }
         }
     }
 }

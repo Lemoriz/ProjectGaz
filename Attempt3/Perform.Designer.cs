@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.BackToMainFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameOfPlots1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExternalAnthropogenicImpacts1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +76,11 @@
             this.MyltAll = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CombAll = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Comb1All = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.BackToMainFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.save = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -144,33 +146,6 @@
             this.dataGridView.Size = new System.Drawing.Size(727, 359);
             this.dataGridView.TabIndex = 13;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(664, 407);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Рассчитать";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BackToMainFormToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(751, 24);
-            this.menuStrip1.TabIndex = 15;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // BackToMainFormToolStripMenuItem
-            // 
-            this.BackToMainFormToolStripMenuItem.Name = "BackToMainFormToolStripMenuItem";
-            this.BackToMainFormToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
-            this.BackToMainFormToolStripMenuItem.Text = "Назад";
-            this.BackToMainFormToolStripMenuItem.Click += new System.EventHandler(this.BackToMainFormToolStripMenuItem_Click);
             // 
             // Number
             // 
@@ -454,11 +429,50 @@
             this.Comb1All.Name = "Comb1All";
             this.Comb1All.ReadOnly = true;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(664, 407);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Рассчитать";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BackToMainFormToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(751, 24);
+            this.menuStrip1.TabIndex = 15;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // BackToMainFormToolStripMenuItem
+            // 
+            this.BackToMainFormToolStripMenuItem.Name = "BackToMainFormToolStripMenuItem";
+            this.BackToMainFormToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.BackToMainFormToolStripMenuItem.Text = "Назад";
+            this.BackToMainFormToolStripMenuItem.Click += new System.EventHandler(this.BackToMainFormToolStripMenuItem_Click);
+            // 
+            // save
+            // 
+            this.save.Location = new System.Drawing.Point(570, 407);
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(75, 23);
+            this.save.TabIndex = 16;
+            this.save.Text = "Сохранить";
+            this.save.UseVisualStyleBackColor = true;
+            this.save.Click += new System.EventHandler(this.save_Click);
+            // 
             // Perform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 435);
+            this.Controls.Add(this.save);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView);
@@ -525,5 +539,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MyltAll;
         private System.Windows.Forms.DataGridViewTextBoxColumn CombAll;
         private System.Windows.Forms.DataGridViewTextBoxColumn Comb1All;
+        private System.Windows.Forms.Button save;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

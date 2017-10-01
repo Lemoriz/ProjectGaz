@@ -103,11 +103,30 @@ namespace Attempt3
             }
         }
 
-        public static double addValue;
+        private static int maxRowInExcel;
 
-        public void AddValue(double a)
+        public int MaxRowInExcel
         {
-            addValue = + a;
+            get { return maxRowInExcel; }
+
+            set
+            {
+                maxRowInExcel = value;
+            }
+        }
+
+        public static double [,] addValue;
+
+        public double [,] DouvleArray(double [,] a)
+        {
+            return addValue = a;
+        }
+
+        public static string[,] addString;
+
+        public string[,] AddString(string[,] l)
+        {
+            return addString = l;
         }
     }
 
