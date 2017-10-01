@@ -128,6 +128,14 @@ namespace Attempt3
         {
             return addString = l;
         }
+
+
+        public static double[,] allAverageValue;
+
+        public double[,] AllAverageValue(double[,] a)
+        {
+            return allAverageValue = a;
+        }
     }
 
 

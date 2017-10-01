@@ -249,7 +249,7 @@ namespace Attempt3
             Values asd = new Values();
             asd.DouvleArray(arrayResult);
             asd.MaxRowInExcel = MaxRowsInAExcel;
-
+            asd.AllAverageValue(allAverageValue);
             asd.AddString(arrayString);
             ObjExcel.Quit();
         }
@@ -274,6 +274,8 @@ namespace Attempt3
 
             if (saveFileDialog1.ShowDialog() != DialogResult.Cancel)
             {
+                Calculations calculations = new Calculations();
+
                 Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
                 ExcelApp.Application.Workbooks.Add(Type.Missing);
 
@@ -312,7 +314,7 @@ namespace Attempt3
 
                 for (int i = 0; i < values.MaxRowInExcel; i++)
                 {
-                    for (int j = 0; j < 4; j++)
+                    for (int j = 0; j < 5; j++)
                     {
                         ExcelApp.Cells[i + 4, j + 3] = Values.addValue[i, j];
                     }
@@ -336,6 +338,22 @@ namespace Attempt3
                 ExcelApp.Cells[1, 14] = "средн. генер.";
                 ExcelApp.Range[ExcelApp.Cells[1, 14], ExcelApp.Cells[3, 14]].Merge();
 
+                for (int i = 0; i < values.MaxRowInExcel; i++)
+                {
+                    for (int j = 1; j < 2; j++)
+                    {
+                        ExcelApp.Cells[i + 4, j + 8] = Values.addString[i, j];
+                    }
+                }
+
+                for (int i = 0; i < values.MaxRowInExcel; i++)
+                {
+                    for (int j = 5; j < 10; j++)
+                    {
+                        ExcelApp.Cells[i + 4, j + 5] = Values.addValue[i, j];
+                    }
+                }
+
                 //Tabl3
                 ExcelApp.Cells[1, 16] = "Наименование участков";
                 ExcelApp.Range[ExcelApp.Cells[1, 16], ExcelApp.Cells[3, 16]].Merge();
@@ -352,6 +370,23 @@ namespace Attempt3
                 ExcelApp.Cells[1, 20] = "№3";
                 ExcelApp.Cells[1, 21] = "средн. генер.";
                 ExcelApp.Range[ExcelApp.Cells[1, 21], ExcelApp.Cells[3, 21]].Merge();
+
+                for (int i = 0; i < values.MaxRowInExcel; i++)
+                {
+                    for (int j = 1; j < 2; j++)
+                    {
+                        ExcelApp.Cells[i + 4, j + 15] = Values.addString[i, j];
+                    }
+                }
+
+                for (int i = 0; i < values.MaxRowInExcel; i++)
+                {
+                    for (int j = 10; j < 15; j++)
+                    {
+                        ExcelApp.Cells[i + 4, j + 7] = Values.addValue[i, j];
+                    }
+                }
+
 
                 //Tabl4
                 ExcelApp.Cells[1, 23] = "Наименование участков";
@@ -370,6 +405,22 @@ namespace Attempt3
                 ExcelApp.Cells[1, 28] = "средн. генер.";
                 ExcelApp.Range[ExcelApp.Cells[1, 28], ExcelApp.Cells[3, 28]].Merge();
 
+                for (int i = 0; i < values.MaxRowInExcel; i++)
+                {
+                    for (int j = 1; j < 2; j++)
+                    {
+                        ExcelApp.Cells[i + 4, j + 22] = Values.addString[i, j];
+                    }
+                }
+
+                for (int i = 0; i < values.MaxRowInExcel; i++)
+                {
+                    for (int j = 15; j < 20; j++)                                               
+                    {
+                        ExcelApp.Cells[i + 4, j + 9] = Values.addValue[i, j];
+                    }
+                }
+
                 //Tabl5
                 ExcelApp.Cells[1, 30] = "Наименование участков";
                 ExcelApp.Range[ExcelApp.Cells[1, 30], ExcelApp.Cells[3, 30]].Merge();
@@ -386,6 +437,22 @@ namespace Attempt3
                 ExcelApp.Cells[1, 34] = "№5";
                 ExcelApp.Cells[1, 35] = "средн. генер.";
                 ExcelApp.Range[ExcelApp.Cells[1, 35], ExcelApp.Cells[3, 35]].Merge();
+
+                for (int i = 0; i < values.MaxRowInExcel; i++)
+                {
+                    for (int j = 1; j < 2; j++)
+                    {
+                        ExcelApp.Cells[i + 4, j + 29] = Values.addString[i, j];
+                    }
+                }
+
+                for (int i = 0; i < values.MaxRowInExcel; i++)
+                {
+                    for (int j = 20; j < 25; j++)
+                    {                                                                               
+                        ExcelApp.Cells[i + 4, j + 11] = Values.addValue[i, j];
+                    }
+                }
 
                 //Tabl6
                 ExcelApp.Cells[1, 37] = "Наименование участков";
@@ -404,19 +471,62 @@ namespace Attempt3
                 ExcelApp.Cells[1, 42] = "средн. генер.";
                 ExcelApp.Range[ExcelApp.Cells[1, 42], ExcelApp.Cells[3, 42]].Merge();
 
+                for (int i = 0; i < values.MaxRowInExcel; i++)
+                {
+                    for (int j = 1; j < 2; j++)
+                    {
+                        ExcelApp.Cells[i + 4, j + 36] = Values.addString[i, j];
+                    }
+                }
 
-                //for (int i = 0; i < dataGridView.Rows.Count -1; i++)
-                //{
-                //    for (int j = 0; j < dataGridView.Columns.Count; j++)
-                //    {
-                //        ExcelApp.Cells[i + 4, j + 1] = 5;
-                //    }
-                //}
+                for (int i = 0; i < values.MaxRowInExcel; i++)                                              
+                {
+                    for (int j = 25; j < 30; j++)
+                    {
+                        ExcelApp.Cells[i + 4, j + 13] = Values.addValue[i, j];
+                    }
+                }
+
+                ExcelApp.Cells[values.MaxRowInExcel + 6, 2] = "для всего участка";
+                ExcelApp.Range[ExcelApp.Cells[values.MaxRowInExcel + 6, 2], ExcelApp.Cells[values.MaxRowInExcel + 6, 3]].Merge();
+
+                ExcelApp.Cells[values.MaxRowInExcel + 7, 3] = "среднее";
+                ExcelApp.Range[ExcelApp.Cells[values.MaxRowInExcel + 7, 3], ExcelApp.Cells[values.MaxRowInExcel + 8, 5]].Merge();
+                ExcelApp.Cells[values.MaxRowInExcel + 9, 3] = "адд";
+                ExcelApp.Cells[values.MaxRowInExcel + 9, 4] = "мулт";
+                ExcelApp.Cells[values.MaxRowInExcel + 9, 5] = "комб";
+                ExcelApp.Cells[values.MaxRowInExcel + 9, 6] = "комб1";
+
+                for (int i = values.MaxRowInExcel + 10; i < values.MaxRowInExcel + 10 + values.MaxRowInExcel; i++)
+                {
+                    for (int j = 0; j < 4; j++)
+                    {
+                        ExcelApp.Cells[i, j + 3] = Values.addValue[(i - (values.MaxRowInExcel + 10)), j + 30];
+                    }
+                }
+
+                ExcelApp.Cells[(values.MaxRowInExcel + 6 + values.MaxRowInExcel+4), 2] = "среднее";
+                for (int j = 0; j < 4; j++)
+                {
+                    ExcelApp.Cells[(values.MaxRowInExcel + 6 + values.MaxRowInExcel + 4), 3+j] = Values.allAverageValue[0,j];
+                }
+
+                ExcelApp.Cells[(values.MaxRowInExcel + 6 + values.MaxRowInExcel + 5), 2] = "средн.ген.";
+                ExcelApp.Cells[(values.MaxRowInExcel + 6 + values.MaxRowInExcel + 5), 3] = Values.allAverageValue[1, 0];
+
+                ExcelApp.Cells[(values.MaxRowInExcel + 6 + values.MaxRowInExcel + 6), 2] = "оптим.мод";
+                for (int j = 0; j < 4; j++)
+                {
+                    ExcelApp.Cells[(values.MaxRowInExcel + 6 + values.MaxRowInExcel + 6), 3 + j] = Values.allAverageValue[2, j];
+                }
+
+
+
                 ExcelApp.ActiveWorkbook.SaveCopyAs(saveFileDialog1.FileName.ToString());
                 ExcelApp.ActiveWorkbook.Saved = true;
                 ExcelApp.Quit();
 
-                MessageBox.Show(saveFileDialog1.FileName, "Загрузка файла успешно выполнена");
+                MessageBox.Show(saveFileDialog1.FileName, "Сохранение файла успешно выполнено");
             }
         }
     }
