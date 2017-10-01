@@ -226,10 +226,60 @@ namespace Attempt3
 
                 ExcelApp.Columns.ColumnWidth = 10;
 
-                for (int i = 1; i < dataGridView1.Columns.Count +1; i++)
-                {
-                    ExcelApp.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
-                }
+                //for (int i = 1; i < dataGridView1.Columns.Count +1; i++)
+                //{
+                //    ExcelApp.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+                //}
+
+                ExcelApp.Cells[1, 1] = "№ ПП";
+                ExcelApp.Range[ExcelApp.Cells[1, 1], ExcelApp.Cells[2, 1]].Merge();
+                ExcelApp.Cells[1, 2] = "Наименование участков";
+                ExcelApp.Range[ExcelApp.Cells[1, 2], ExcelApp.Cells[2, 2]].Merge();
+                ExcelApp.Cells[1, 3] = "Внешние антропогенные воздействия";
+                ExcelApp.Range[ExcelApp.Cells[1, 3], ExcelApp.Cells[1, 6]].Merge();
+                ExcelApp.Cells[2, 3] = "B11";
+                ExcelApp.Cells[2, 4] = "B12";
+                ExcelApp.Cells[2, 5] = "B13";
+                ExcelApp.Cells[2, 6] = "B14";
+                ExcelApp.Cells[1, 7] = "Природные воздействия";
+                ExcelApp.Range[ExcelApp.Cells[1, 7], ExcelApp.Cells[1, 10]].Merge();
+                ExcelApp.Cells[2, 7] = "B21";
+                ExcelApp.Cells[2, 8] = "B22";
+                ExcelApp.Cells[2, 9] = "B23";
+                ExcelApp.Cells[2, 10] = "B24";
+                ExcelApp.Cells[1, 11] = "Качество строительно-монтажных работ";
+                ExcelApp.Range[ExcelApp.Cells[1, 11], ExcelApp.Cells[1, 15]].Merge();
+                ExcelApp.Cells[2, 11] = "B31";
+                ExcelApp.Cells[2, 12] = "B32";
+                ExcelApp.Cells[2, 13] = "B33";
+                ExcelApp.Cells[2, 14] = "B34";
+                ExcelApp.Cells[2, 15] = "B35";
+                ExcelApp.Cells[1, 16] = "Эксплуатационные факторы";
+                ExcelApp.Range[ExcelApp.Cells[1, 16], ExcelApp.Cells[1, 22]].Merge();
+                ExcelApp.Cells[2, 16] = "B41";
+                ExcelApp.Cells[2, 17] = "B42";
+                ExcelApp.Cells[2, 18] = "B43";
+                ExcelApp.Cells[2, 19] = "B44";
+                ExcelApp.Cells[2, 20] = "B45";
+                ExcelApp.Cells[2, 21] = "B46";
+                ExcelApp.Cells[2, 22] = "B47";
+                ExcelApp.Cells[1, 23] = "Качество производства труб и ЗА";
+                ExcelApp.Range[ExcelApp.Cells[1, 23], ExcelApp.Cells[1, 29]].Merge();
+                ExcelApp.Cells[2, 23] = "B51";
+                ExcelApp.Cells[2, 24] = "B52";
+                ExcelApp.Cells[2, 25] = "B53";
+                ExcelApp.Cells[2, 26] = "B54";
+                ExcelApp.Cells[2, 27] = "B55";
+                ExcelApp.Cells[2, 28] = "B56";
+                ExcelApp.Cells[2, 29] = "B57";
+                ExcelApp.Cells[1, 30] = "Конструктивно-технологические факторы";
+                ExcelApp.Range[ExcelApp.Cells[1, 30], ExcelApp.Cells[1, 34]].Merge();
+                ExcelApp.Cells[2, 30] = "B61";
+                ExcelApp.Cells[2, 31] = "B62";
+                ExcelApp.Cells[2, 32] = "B63";
+                ExcelApp.Cells[2, 33] = "B64";
+                ExcelApp.Cells[2, 34] = "B65";
+
 
                 for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
                 {
@@ -242,7 +292,7 @@ namespace Attempt3
                 ExcelApp.ActiveWorkbook.Saved = true;
                 ExcelApp.Quit();
 
-                MessageBox.Show(saveFileDialog1.FileName, "Загруска файла успешно выполнена");
+                MessageBox.Show(saveFileDialog1.FileName, "Сохранение файла успешно выполнено");
             }
         }
 

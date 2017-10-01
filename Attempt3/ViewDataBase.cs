@@ -141,13 +141,7 @@ namespace Attempt3
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            string a;
-            string msg = String.Format("Row: {0}, Column: {1}",
-            dataGridView.CurrentCell.RowIndex,
-            dataGridView.CurrentCell.ColumnIndex);
-            MessageBox.Show(msg, "Current Cell");
-            a = Convert.ToString(dataGridView.Rows[2].Cells[3].Value);
-            MessageBox.Show(a);
+
         }
 
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
